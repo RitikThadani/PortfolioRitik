@@ -13,7 +13,7 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-/**BACKGROUND MOVE**/
+/**FONDO CON CAMBIO DE COLOR**/
 @keyframes color {
     0% {
         background: #7e7d7d;
@@ -41,38 +41,36 @@ html {
 }
 
 body {
-    background: #33CCCC;
     /* Fallback */
-    animation: color 9s infinite linear;
+    animation: color 8s infinite linear;
+
     text-align: center;
     padding: 2em;
     font-size: 16px;
     /* 1 rem =10px*/
     font-family: 'Krub', sans-serif;
-    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
 }
 
-/**Scroll snap **/
-
-/* .nav-bg,
+/**Scroll**/
+.nav-bg,
 .contenedor h2,
 .cont,
 .cont2,
 .formulario,
 .boxfinal,
-.principio{
+.principio {
     scroll-snap-align: center;
     scroll-snap-stop: y mandatory;
 }
 
-
-*,*:before, *:after{
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-} */
+}
 
 .titulo {
     font-weight: 100;
-    /* background-color: var(--primario); */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 10rem;
     align-items: center;
@@ -167,12 +165,6 @@ h2 {
     /* background-color: rgba(0,0,0,.6); */
     width: 100%;
     height: 30%;
-    /* position: absolute;
-    background-color: red;
-    width: 2rem;
-    height: 2rem;
-    bottom: 250px;
-    left: 250px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,7 +186,6 @@ h2 {
 .sombra {
     box-shadow: 0px 0px 16px 0px rgba(61, 60, 61, 0.79);
     background-color: var(--blanco);
-    /* padding:2rem; */
     border-radius: 1.5rem;
 }
 
@@ -266,4 +257,77 @@ h2 {
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* .container {
+    margin-top: 2rem;
+    position: relative;
+    padding-top: 22px;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.inputBox {
+    position: relative;
+    width: 350px;
+}
+
+.inputBox input {
+    position: relative;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    font-size: 1.25em;
+    transition: 1s;
+    letter-spacing: 0.05em;
+    z-index: 2;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 1s;
+    letter-spacing: 0.05em;
+    color: #333;
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+    font-size: 0.85em;
+    transform: translateY(-32px);
+}
+
+.inputBox i {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    background: linear-gradient(45deg, #000000, #a5a5a5);
+    transition: 1s;
+    z-index: 1;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.inputBox input:valid~i,
+.inputBox input:focus~i {
+    height: 100%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
 }

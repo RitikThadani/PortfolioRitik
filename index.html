@@ -50,8 +50,8 @@
 		<h2>SKILLS</h2>
 		<h3>Principiante en Java, C#, C++, Python, VHDL, HTML y CSS. Actualmente profundizando en Java, HTML y
 			CSS.<br><br><br><br> Experiencias en otros sectores:
-			<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Dependiente de tienda en Bazar Atoz
-			(Lanzarote)<br>&nbsp;&nbsp;&nbsp;&nbsp;05/2019 - 07/2019
+			<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Dependiente de tienda en Pull & Bear
+			(Gran Canaria)<br>&nbsp;&nbsp;&nbsp;&nbsp;01/2023 - Actualidad
 			<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Ayudante de Camarero en Riu Palace Meloneras (Gran
 			Canaria)<br>&nbsp;&nbsp;&nbsp;&nbsp;08/2022 - 09/2022
 			<br><br><br><br>Títulos - Permisos - Certificados:
@@ -66,12 +66,18 @@
 
 	<main id="proyects" class="cont2">
 		<h2>PROYECTOS</h2>
-		<h3>Prácticas en HTML y CSS.
+		<h3>Prácticas en HTML, CSS y Java.
 			<h4><a href="https://ritikthadani.github.io/DamPortfolio/">
 					<br><br><img alt="Demo" src="Img\IconoPro.png" width="150" height="150">
 				</a>&nbsp;&nbsp;&nbsp;&nbsp;
 				<a href="https://github.com/RitikThadani/FemProduct/blob/main/design/desktop-preview.jpg">
 					<img alt="Demo" src="Img\Parfum.png" width="155" height="150">
+				</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="https://github.com/RitikThadani/EjercicioIntegraci-nPoo">
+					<img alt="Demo" src="Img\1.png" width="155" height="150">
+				</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="https://ritikthadani.github.io/RitikSocialProofSectionMaster/">
+					<img alt="Demo" src="Img\2.png" width="155" height="150">
 				</a>
 			</h4>
 		</h3>
@@ -80,28 +86,44 @@
 		<br><br><br><br><br><br><br>
 	</main>
 
+	<script>script.js</script>
+
 	<main class="contenedor sombra">
 		<section>
-			<form id="formulario" class="formulario">
+			<form id="formulario" class="formulario" onsubmit="return validarFormulario();">
 				<fieldset>
 					<legend>Contacta conmigo llenando todos los campos</legend>
 					<div class="contenedor-campos">
-						<div class="campo">
-							<label> Nombre</label>
-							<input class="imput-text" type="text" placeholder="Tu Nombre">
+						<div class="container">
+							<div class="inputBox">
+								<input type="text" required="required">
+								<span>Nombre Completo</span>
+								<i></i>
+							</div>
 						</div>
-						<div class="campo">
-							<label> Teléfono</label>
-							<input class="imput-text" type="tel" placeholder="Tu Teléfono">
+						<div class="container">
+							<div class="inputBox">
+								<input type="text" required="required">
+								<span>Teléfono</span>
+								<i></i>
+							</div>
 						</div>
-						<div class="campo">
-							<label> Correo</label>
-							<input class="imput-text" type="email" placeholder="Tu Email">
+						<div class="container">
+							<div class="inputBox">
+								<input type="text" required="required" id="email" name="email">
+								<span id="error-message"></span>
+								<span for="email">Correo</span>
+								<i></i>
+							</div>
 						</div>
-						<div class="campo">
-							<label> Mensaje</label>
-							<textarea class="imput-text"></textarea>
+						<div class="container">
+							<div class="inputBox">
+								<input type="text" required="required">
+								<span>Mensaje</span>
+								<i></i>
+							</div>
 						</div>
+						<button type="submit">Enviar</button>
 					</div>
 				</fieldset>
 			</form>
